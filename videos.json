@@ -1,0 +1,107 @@
+[
+  {
+    "id": "jufQUvb_FWQ",
+    "title": "🔴 Écoute CIBI et HF en direct : y a-t-il quelqu'un ? Venez poser vos questions📡",
+    "url": "https://www.youtube.com/watch?v=jufQUvb_FWQ",
+    "published": "2026-10-04T10:17:28.000Z",
+    "description": "Live radio sur RetroMakersLab : on écoute les bandes HF et le 27 MHz (CIBI) avec le SDR, et on cherche ensemble s'il y a de la propagation.\n\nAu programme :\n- Waterfall en direct et exploration des bandes\n- Écoute CIBI, HF, balises et signaux\n- Explications simples sur la propagation (flux solaire, indice K, MUF)\n- Vos questions radio, SDR et rétro-informatique dans le chat\n\nPose tes questions dans"
+  },
+  {
+    "id": "1AGWuvu8nb0",
+    "title": "On rallume les Passé (C64, Amiga, radio, SDR)",
+    "url": "https://www.youtube.com/watch?v=1AGWuvu8nb0",
+    "published": "2026-10-03T18:29:56.000Z",
+    "description": "Bienvenue sur RetroMakersLab, la chaîne des makers qui aiment bidouiller : rétro-informatique (Commodore 64, Amiga, Atari), électronique, impression 3D, SDR, CIBI et radio HF.\n\nIci, on répare, on teste, on crée, et on partage tout ça sans prise de tête : des tutos clairs, des galères, des victoires.\n\n• Réparation et restauration de machines rétro\n• Radio : CIBI, SDR, radio HF\n• Électronique et pro"
+  },
+  {
+    "id": "1By4VQs7wlE",
+    "title": "RetroMakersLab Merci",
+    "url": "https://www.youtube.com/watch?v=1By4VQs7wlE",
+    "published": "2026-10-03T15:17:52.000Z",
+    "description": "Bienvenue sur RetroMakersLab ! \n🖥️ Site RetroMakersLab\nhttps://retromakerslab.fr\n\n📘 Guides RetroMakersLab (Payhip)\nGuide Amiga 500/1200 — Restauration Complète : https://payhip.com/b/FD26K\nGuide SDR Avancé — Terrain + config SDR# : https://payhip.com/b/o7lXR\nGuide Réparation Commodore 1702 : https://payhip.com/b/Q4rGM\nGuide CB 27MHz — Le Guide Intégral : https://payhip.com/b/2D3rj\nGuide UV-K5 — "
+  },
+  {
+    "id": "AYrkqGMQuf8",
+    "title": "🔴 LIVE Radio SDR : on écoute les ondes en direct (HF, CIBI, VHF) | RetroMakersLab📡",
+    "url": "https://www.youtube.com/watch?v=AYrkqGMQuf8",
+    "published": "2026-10-03T14:37:35.000Z",
+    "description": "🔗 Matériel :\n- Xiegu X6100 : https://amazon.fr/dp/B0B2CD48GC?tag=retromakers05-21\n- Président Lincoln 2+ : https://amazon.fr/dp/B07V2P2CGB?tag=retromakers05-21\n- UV-K5 (lot de 8) : https://amazon.fr/dp/B0CMPD7TQM?tag=retromakers05-21\n- Baofeng UV-5R : https://amazon.fr/dp/B0CSSC4D57?tag=retromakers05-21\n- Radtel RT-880 : https://amazon.fr/dp/B0F2SZMMC7?tag=retromakers05-21\n- Radtel RT-860 : https"
+  },
+  {
+    "id": "oFocoiPebEE",
+    "title": "Pour les abonnés merci",
+    "url": "https://www.youtube.com/watch?v=oFocoiPebEE",
+    "published": "2026-10-03T08:08:03.000Z",
+    "description": "Bienvenue sur RetroMakersLab ! \n🖥️ Site RetroMakersLab\nhttps://retromakerslab.fr\n\n📘 Guides RetroMakersLab (Payhip)\nGuide Amiga 500/1200 — Restauration Complète : https://payhip.com/b/FD26K\nGuide SDR Avancé — Terrain + config SDR# : https://payhip.com/b/o7lXR\nGuide Réparation Commodore 1702 : https://payhip.com/b/Q4rGM\nGuide CB 27MHz — Le Guide Intégral : https://payhip.com/b/2D3rj\nGuide UV-K5 — "
+  },
+  {
+    "id": "UAR7Hen8qMw",
+    "title": "Merci les abonnés",
+    "url": "https://www.youtube.com/watch?v=UAR7Hen8qMw",
+    "published": "2026-10-03T08:07:55.000Z",
+    "description": "Bienvenue sur RetroMakersLab ! \n🖥️ Site RetroMakersLab\nhttps://retromakerslab.fr\n\n📘 Guides RetroMakersLab (Payhip)\nGuide Amiga 500/1200 — Restauration Complète : https://payhip.com/b/FD26K\nGuide SDR Avancé — Terrain + config SDR# : https://payhip.com/b/o7lXR\nGuide Réparation Commodore 1702 : https://payhip.com/b/Q4rGM\nGuide CB 27MHz — Le Guide Intégral : https://payhip.com/b/2D3rj\nGuide UV-K5 — "
+  },
+  {
+    "id": "5cyUgoiI1Bg",
+    "title": "La Propagation Cibi Radio",
+    "url": "https://www.youtube.com/watch?v=5cyUgoiI1Bg",
+    "published": "2026-10-02T15:30:08.000Z",
+    "description": "Pourquoi la CIBI porte à 1 000 km un jour et reste muette le lendemain ? La réponse est à 150 millions de kilomètres : le Soleil. On décortique la propagation radio sur la bande 11 m (27 MHz) : cycle solaire, ionosphère, MUF, Sporadic E, éruptions solaires et outils gratuits pour prévoir les ouvertures avec un SDR.\n\n🌐 Site : https://retromakerslab.fr\n\n🛠️ Matériel utilisé :\n- Nooelec RTL-SDR v5 :"
+  },
+  {
+    "id": "eDBe-uTkAhA",
+    "title": "Connecté",
+    "url": "https://www.youtube.com/watch?v=eDBe-uTkAhA",
+    "published": "2026-10-01T16:52:03.000Z",
+    "description": "Bienvenue sur RetroMakersLab ! \n🖥️ Site RetroMakersLab\nhttps://retromakerslab.fr\n\n📘 Guides RetroMakersLab (Payhip)\nGuide Amiga 500/1200 — Restauration Complète : https://payhip.com/b/FD26K\nGuide SDR Avancé — Terrain + config SDR# : https://payhip.com/b/o7lXR\nGuide Réparation Commodore 1702 : https://payhip.com/b/Q4rGM\nGuide CB 27MHz — Le Guide Intégral : https://payhip.com/b/2D3rj\nGuide UV-K5 — "
+  },
+  {
+    "id": "LuspslvJPEo",
+    "title": "🔴 LIVE SDR — J'écoute les ondes en direct 📡",
+    "url": "https://www.youtube.com/watch?v=LuspslvJPEo",
+    "published": "2026-09-28T03:54:23.000Z",
+    "description": "🔴 Live écoute radio en direct — RetroMakersLab\n\nOn allume les récepteurs pour une session écoute radio en live !\n\nAu programme :\n📡 Écoute SDR & waterfall en direct🔗 \n\nMatériel :\n- Xiegu X6100 : https://amazon.fr/dp/B0B2CD48GC?tag=retromakers05-21\n- Président Lincoln 2+ : https://amazon.fr/dp/B07V2P2CGB?tag=retromakers05-21\n- UV-K5 (lot de 8) : https://amazon.fr/dp/B0CMPD7TQM?tag=retromakers05-2"
+  },
+  {
+    "id": "L8gx2nIckNU",
+    "title": "La puce Sid du commodore 64",
+    "url": "https://www.youtube.com/watch?v=L8gx2nIckNU",
+    "published": "2026-09-26T18:36:17.000Z",
+    "description": "La SID, Sound Interface Device, c'est la puce sonore du Commodore 64 sortie en 1982. Trois voix, filtres analogiques, un son tellement en avance sur son temps qu'elle est encore utilisée aujourd'hui par des musiciens chiptune. On décortique cette puce culte dans cette vidéo.\n\n🌐 Site : https://retromakerslab.fr\n\n🛠️ Matériel utilisé :\n- Docking Station Mac Mini M4 : https://amazon.fr/dp/B0DSJ633D8"
+  },
+  {
+    "id": "amMU5vfKxhk",
+    "title": "La Puce SID du Commodore 64 : Le Son qui a Changé l'Histoire 🎵",
+    "url": "https://www.youtube.com/watch?v=amMU5vfKxhk",
+    "published": "2026-09-26T14:45:06.000Z",
+    "description": "La SID, Sound Interface Device, c'est la puce sonore du Commodore 64 sortie en 1982. Trois voix, filtres analogiques, un son tellement en avance sur son temps qu'elle est encore utilisée aujourd'hui par des musiciens chiptune. On décortique cette puce culte dans cette vidéo.\n\n🌐 Site : https://retromakerslab.fr\n\n🛠️ Matériel utilisé :\n- Docking Station Mac Mini M4 : https://amazon.fr/dp/B0DSJ633D8"
+  },
+  {
+    "id": "BpaH-2t3nyE",
+    "title": "SIGNAL VERROUILLÉ",
+    "url": "https://www.youtube.com/watch?v=BpaH-2t3nyE",
+    "published": "2026-09-23T16:49:07.000Z",
+    "description": "Bienvenue sur RetroMakersLab ! \n🖥️ Site RetroMakersLab\nhttps://retromakerslab.fr\n\n\n❤️ Soutenir la chaîne :\n- Patreon : https://www.patreon.com/cw/RetroMakersLab\n\n🌐 Retrouve-moi partout :\n- Site : https://retromakerslab.fr\n- Discord : https://discord.com/invite/Rztt735cep\n- TikTok : https://www.tiktok.com/@retromakerslab\n- Twitch : https://www.twitch.tv/retro_makers_lab\n- Instagram : https://www."
+  },
+  {
+    "id": "FIcwYPwPE68",
+    "title": "🔴 LE LIVE COMMENCE ! 📡On allume les récepteurs pour une session écoute radio en direct !",
+    "url": "https://www.youtube.com/watch?v=FIcwYPwPE68",
+    "published": "2026-09-20T16:05:10.000Z",
+    "description": "🔴 Live écoute radio en direct — RetroMakersLab\n\nOn allume les récepteurs pour une session écoute radio en live !\n\nAu programme :\n📡 Écoute SDR & waterfall en direct\n📻 Trafic CIBI 27 MHz\n🖼️ Décodage SSTV\n💬 Échanges en direct avec la communauté dans le chat\n\nCafé prêt ? On part à l'écoute des ondes ensemble.\n\n👉 Rejoindre le live : https://www.youtube.com/live/FIcwYPwPE68\n👉 Discord de la commun"
+  },
+  {
+    "id": "QwcUasCvdos",
+    "title": "La Cibi Réseau Social",
+    "url": "https://www.youtube.com/watch?v=QwcUasCvdos",
+    "published": "2026-09-19T15:30:23.000Z",
+    "description": "Avant Facebook, avant Discord, avant même internet grand public, il y avait la CIBI. Un canal ouvert, des inconnus qui se parlent, des pseudos, des groupes qui se forment sur les ondes. Dans cette vidéo, je retrace comment la CIBI a fonctionné comme un véritable réseau social des années avant l'arrivée du web, avec ses codes, son argot, ses communautés locales et sa culture bien à elle.\n\n🔗 Matéri"
+  },
+  {
+    "id": "tPgISfcf1d8",
+    "title": "Passion",
+    "url": "https://www.youtube.com/watch?v=tPgISfcf1d8",
+    "published": "2026-09-16T08:30:07.000Z",
+    "description": "Un C64, une radio CIBI, une imprimante 3D. Le même atelier, tous les jours.\n\nTutos rétro-informatique, radio et maker sans blabla. La suite sur la chaîne.\n\nDiscord : https://discord.com/invite/Rztt735cep\n\n#RetroMakersLab #Shorts #RetroInformatique #RadioAmateur #CB27MHz #Maker #Amiga #commodore64"
+  }
+]
