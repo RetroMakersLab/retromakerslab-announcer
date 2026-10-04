@@ -150,7 +150,7 @@ function videoId(raw) {
 const watchUrl = (id) => "https://www.youtube.com/watch?v=" + id;
 
 function hookFrom(desc) {
-  const lines = (desc || "").split(/\n/).map(l => l.replace(/#\S+/g, "").trim()).filter(l => /^[\p{L}\p{N}]/u.test(l) && !/^(https?:|bienvenue)/i.test(l));
+  const lines = (desc || "").split(/\n/).map(l => l.replace(/#\S+/g, "").trim()).filter(l => /^[\p{L}\p{N}]/u.test(l) && !/^(https?:|bienvenue)/i.test(l) && !l.includes("http"));
   let line = lines[0] || "";
   const cut = line.search(/[.!?](\s|$)/);
   if (cut > 20) line = line.slice(0, cut + 1);
