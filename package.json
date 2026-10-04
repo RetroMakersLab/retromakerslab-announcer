@@ -1,0 +1,8 @@
+{
+  "name": "retromakerslab-announcer",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": "22.x" },
+  "scripts": { "test": "node test.js", "start": "node run.js" }
+}
