@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Atelier de partage RetroMakersLab</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Pixelify+Sans:wght@500;700&display=swap">
+<style>
+/* Mise en page : une colonne de saisie à gauche, une carte par réseau à droite ; une seule colonne sur téléphone. */
+:root {
+  --bg: #f3f1ee;
+  --panel: #fbfaf8;
+  --fg: #1b2230;
+  --muted: #5d6677;
+  --line: #d9d5ce;
+  --accent: #d9560b;
+  --accent-fg: #ffffff;
+  --ok: #1f7a46;
+  --warn: #a8620a;
+  --bad: #b3261e;
+  --field: #ffffff;
+  --font-display: "Pixelify Sans", "Courier New", monospace;
+  --font-body: "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #131a26; --panel: #1a2333; --fg: #e8ecf3; --muted: #9aa5b8; --line: #2c374b;
+    --accent: #ff8a3d; --accent-fg: #1a1208; --ok: #5fcf8b; --warn: #f0b050; --bad: #ff8a80; --field: #0f1520;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #131a26; --panel: #1a2333; --fg: #e8ecf3; --muted: #9aa5b8; --line: #2c374b;
+  --accent: #ff8a3d; --accent-fg: #1a1208; --ok: #5fcf8b; --warn: #f0b050; --bad: #ff8a80; --field: #0f1520;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 15px; line-height: 1.5;
+  padding-inline: 16px; padding-block: 24px 48px; }
+.wrap { max-width: 1120px; margin-inline: auto; }
+header { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; margin-bottom: 24px; }
+h1 { font-family: var(--font-display); font-weight: 700; font-size: 1.9rem; margin: 0; letter-spacing: .01em; text-wrap: balance; }
+header p { margin: 0; color: var(--muted); }
+.layout { display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: 24px; align-items: start; }
+@media (max-width: 820px) { .layout { grid-template-columns: minmax(0, 1fr); } }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 16px; }
+.panel.sticky { position: sticky; top: 16px; }
+@media (max-width: 820px) { .panel.sticky { position: static; } }
+label, .lbl { display: block; font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); font-weight: 600; margin-bottom: 4px; }
+input[type=text], input[type=url], textarea { width: 100%; font: inherit; color: var(--fg); background: var(--field);
+  border: 1px solid var(--line); border-radius: 4px; padding: 8px 10px; }
+textarea { resize: vertical; }
+input:focus-visible, textarea:focus-visible, button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.field { margin-bottom: 14px; }
+.hint { font-size: .8rem; color: var(--muted); margin: 4px 0 0; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font: inherit; font-size: .82rem; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line);
+  background: var(--field); color: var(--fg); cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
+.cards { display: grid; gap: 16px; min-width: 0; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 16px; min-width: 0; }
+.card h2 { font-family: var(--font-display); font-size: 1.2rem; margin: 0; font-weight: 700; }
+.card-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
+.meta { font-family: var(--font-mono); font-size: .78rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.meta.over { color: var(--bad); font-weight: 500; }
+.card textarea { font-family: var(--font-mono); font-size: .85rem; line-height: 1.5; min-height: 120px; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; align-items: center; }
+.btn { font: inherit; font-weight: 600; font-size: .88rem; padding: 7px 14px; border-radius: 4px; border: 1px solid var(--line);
+  background: var(--field); color: var(--fg); cursor: pointer; text-decoration: none; display: inline-block; }
+.btn.primary { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
+.btn:hover { filter: brightness(1.06); }
+.btn.done { background: var(--ok); border-color: var(--ok); color: var(--bg); }
+.note { font-size: .82rem; color: var(--muted); margin: 8px 0 0; }
+.note.warn { color: var(--warn); }
+.sub { margin-top: 10px; }
+.sub .lbl { margin-bottom: 4px; }
+.sub input { font-family: var(--font-mono); font-size: .85rem; }
+.toggle { margin-left: auto; background: none; border: 1px solid var(--line); color: var(--muted); border-radius: 4px; font: inherit; font-size: .8rem; padding: 4px 10px; cursor: pointer; }
+.sample { display: inline-block; font-size: .75rem; font-family: var(--font-mono); color: var(--warn); border: 1px dashed var(--warn); border-radius: 3px; padding: 1px 6px; margin-bottom: 10px; }
+@media (prefers-reduced-motion: no-preference) { .btn { transition: filter .15s; } }
+</style></head><body>
+<div class="wrap">
+  <header>
+    <h1>Atelier de partage</h1>
+    <p>Colle ta vidéo, récupère un texte adapté à chaque réseau.</p>
+    <button class="toggle" id="theme" type="button">Thème</button>
+  </header>
+
+  <div class="layout">
+    <section class="panel sticky" aria-label="La vidéo">
+      <div class="sample" id="sample">Exemple : colle ton lien pour le remplacer</div>
+      <div class="field">
+        <label for="url">Lien de la vidéo</label>
+        <input type="url" id="url" placeholder="https://youtu.be/..." autocomplete="off">
+        <div class="actions"><button class="btn primary" id="paste" type="button">Coller le lien</button></div>
+        <p class="hint" id="status">Colle le lien : le titre et les thèmes sont trouvés tout seuls.</p>
+      </div>
+      <div class="field">
+        <span class="lbl">Thèmes (hashtags)</span>
+        <div class="chips" id="chips"></div>
+      </div>
+      <details id="more">
+        <summary class="lbl" style="cursor:pointer">Modifier</summary>
+        <div class="field"><label for="title">Titre</label><input type="text" id="title" autocomplete="off"></div>
+        <div class="field"><label for="hook">Accroche</label><textarea id="hook" rows="2"></textarea></div>
+        <div class="field"><label for="ask">Question pour la communauté</label><input type="text" id="ask" autocomplete="off"></div>
+      </details>
+      <p class="note">Facebook est absent : pas de Page. Chaque texte reste modifiable avant de copier.</p>
+    </section>
+
+    <section class="cards" id="cards" aria-label="Textes par réseau"></section>
+  </div>
+</div>
+
+<script>
+const LINKS = {
+  site: "https://retromakerslab.fr",
+  discord: "https://discord.com/invite/Rztt735cep",
+  youtube: "https://www.youtube.com/@RetroMakersLab",
+  reddit: "https://www.reddit.com/user/RetroMakersLab/",
+  x: "https://x.com/Retro_Maker_Lab"
+};
+const TOPICS = [
+  { id: "retro", label: "Rétro-informatique", tags: ["#RetroComputing", "#Amiga", "#C64"] },
+  { id: "radio", label: "CIBI / radio", tags: ["#CIBI", "#Radioamateur", "#SDR"] },
+  { id: "maker", label: "Maker / 3D", tags: ["#Maker", "#Impression3D", "#DIY"] },
+  { id: "mesh", label: "Meshtastic", tags: ["#Meshtastic", "#LoRa"] },
+  { id: "elec", label: "Électronique", tags: ["#Electronique", "#Arduino"] }
+];
+const EXAMPLE = {
+  url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  title: "Exemple : ton titre de vidéo ici",
+  hook: "Exemple : ce que tu montres dans la vidéo, en une phrase.",
+  ask: "Et toi, tu as déjà essayé ?"
+};
+
+const $ = (id) => document.getElementById(id);
+const state = { topics: new Set(["retro"]), dirty: {} };
+
+function cleanUrl(raw) {
+  const s = raw.trim();
+  if (!s) return "";
+  try {
+    const u = new URL(s);
+    let id = "";
+    if (u.hostname === "youtu.be") id = u.pathname.slice(1);
+    else if (u.pathname.startsWith("/shorts/")) id = u.pathname.split("/")[2];
+    else id = u.searchParams.get("v") || "";
+    return id ? "https://www.youtube.com/watch?v=" + id : s;
+  } catch (e) { return s; }
+}
+function tags(max) {
+  const all = ["#RetroMakersLab"];
+  TOPICS.forEach(t => { if (state.topics.has(t.id)) all.push(...t.tags); });
+  return all.slice(0, max);
+}
+function vals() {
+  return {
+    url: cleanUrl($("url").value),
+    title: $("title").value.trim(),
+    hook: $("hook").value.trim(),
+    ask: $("ask").value.trim()
+  };
+}
+
+const NETWORKS = [
+  {
+    id: "x", name: "X", limit: 280,
+    build(v) {
+      const t = tags(3).join(" ");
+      const tail = "\n\n" + v.url + "\n\n" + t;
+      const tailLen = 2 + 23 + 2 + t.length;
+      let head = v.hook ? v.title + " : " + v.hook : v.title;
+      const room = 280 - tailLen;
+      if (head.length > room) head = head.slice(0, room - 1).trimEnd() + "…";
+      return head + tail;
+    },
+    len(text, v) { return text.split(v.url).join("x".repeat(23)).length; },
+    open(text) { return "https://x.com/intent/post?text=" + encodeURIComponent(text); },
+    openLabel: "Ouvrir X avec le texte",
+    note: "Le lien compte pour 23 caractères, comme sur X."
+  },
+  {
+    id: "insta", name: "Instagram", limit: 2200,
+    build(v) {
+      return "Nouvelle vidéo sur RetroMakersLab : " + v.title + "\n\n" + (v.hook ? v.hook + "\n\n" : "") +
+        "Le lien est dans la bio : " + LINKS.youtube + "\n" +
+        "Sur le site aussi : " + LINKS.site + "\n\n" + tags(8).join(" ");
+    },
+    open() { return "https://www.instagram.com/"; },
+    openLabel: "Ouvrir Instagram",
+    note: "Les liens ne sont pas cliquables dans une légende. Mets le lien de la vidéo dans ta bio avant de publier."
+  },
+  {
+    id: "tiktok", name: "TikTok", limit: 2200,
+    build(v) {
+      return (v.hook || v.title) + "\nVidéo complète sur YouTube : RetroMakersLab\n\n" + tags(5).join(" ");
+    },
+    open() { return "https://www.tiktok.com/upload"; },
+    openLabel: "Ouvrir TikTok",
+    note: "Légende courte pour un extrait. Pas de lien cliquable : renvoie vers la bio."
+  },
+  {
+    id: "reddit", name: "Reddit", limit: 300, split: true,
+    build(v) {
+      return { title: v.title, body: (v.hook ? v.hook + "\n\n" : "") + "La vidéo complète (français) : " + v.url +
+        (v.ask ? "\n\n" + v.ask : "") };
+    },
+    open(text, v, extra) {
+      return "https://www.reddit.com/submit?type=link&url=" + encodeURIComponent(v.url) + "&title=" + encodeURIComponent(extra.title);
+    },
+    openLabel: "Ouvrir Reddit",
+    warn: "Seulement dans un sous-reddit qui autorise l'auto-promotion, après quelques semaines de commentaires. Garde environ 9 contenus sans promo pour 1 avec."
+  },
+  {
+    id: "discord", name: "Discord", limit: 2000,
+    build(v) {
+      return "Nouvelle vidéo sur RetroMakersLab : **" + v.title + "**\n" + (v.hook ? v.hook + "\n" : "") + v.url +
+        (v.ask ? "\n\n" + v.ask : "");
+    },
+    open() { return LINKS.discord; },
+    openLabel: "Ouvrir le Discord",
+    note: "Déjà annoncé automatiquement dans ton salon d'annonces. Utile pour relancer la discussion ailleurs."
+  },
+  {
+    id: "community", name: "Communauté YouTube", limit: 1500,
+    build(v) {
+      return "Nouvelle vidéo : " + v.title + "\n" + (v.hook ? v.hook + "\n" : "") + (v.ask ? "\n" + v.ask : "") +
+        "\n\nDis-le moi en commentaire !";
+    },
+    open() { return "https://studio.youtube.com/"; },
+    openLabel: "Ouvrir YouTube Studio",
+    note: "Onglet Communauté, sans le lien : la vidéo s'attache au post."
+  }
+];
+
+function buildCards() {
+  const host = $("cards");
+  host.textContent = "";
+  NETWORKS.forEach(n => {
+    const card = document.createElement("article");
+    card.className = "card";
+    card.id = "card-" + n.id;
+    const rows = n.split
+      ? `<div class="sub"><label class="lbl" for="${n.id}-title">Titre du post</label><input type="text" id="${n.id}-title"></div>
+         <div class="sub"><label class="lbl" for="${n.id}-text">Texte</label><textarea id="${n.id}-text" rows="6"></textarea></div>`
+      : `<textarea id="${n.id}-text" rows="7"></textarea>`;
+    card.innerHTML = `<div class="card-head"><h2>${n.name}</h2><span class="meta" id="${n.id}-meta"></span></div>${rows}
+      <div class="actions">
+        <button class="btn primary" type="button" data-copy="${n.id}">Copier</button>
+        <a class="btn" id="${n.id}-open" target="_blank" rel="noopener">${n.openLabel}</a>
+        <button class="btn" type="button" data-reset="${n.id}">Régénérer</button>
+      </div>
+      ${n.warn ? `<p class="note warn">${n.warn}</p>` : ""}${n.note ? `<p class="note">${n.note}</p>` : ""}`;
+    host.appendChild(card);
+  });
+}
+
+function fill(n, force) {
+  const v = vals();
+  if (!v.title) v.title = "…";
+  if (!v.url) v.url = "https://www.youtube.com/@RetroMakersLab";
+  const ta = $(n.id + "-text");
+  if (!force && state.dirty[n.id]) { refreshMeta(n, v); return; }
+  const out = n.build(v);
+  if (n.split) { $(n.id + "-title").value = out.title; ta.value = out.body; }
+  else ta.value = out;
+  state.dirty[n.id] = false;
+  refreshMeta(n, v);
+}
+function refreshMeta(n, v) {
+  const ta = $(n.id + "-text");
+  const text = ta.value;
+  const extra = n.split ? { title: $(n.id + "-title").value } : null;
+  const len = n.len ? n.len(text, v) : (n.split ? $(n.id + "-title").value.length : text.length);
+  const meta = $(n.id + "-meta");
+  meta.textContent = len + " / " + n.limit;
+  meta.classList.toggle("over", len > n.limit);
+  $(n.id + "-open").href = n.open(text, v, extra);
+}
+function refreshAll(force) { NETWORKS.forEach(n => fill(n, force)); }
+
+const DATA_URL = "https://raw.githubusercontent.com/RetroMakersLab/retromakerslab-announcer/main/videos.json";
+let VIDEOS = {}, LOADED = false;
+async function loadVideos() {
+  try {
+    const r = await fetch(DATA_URL, { cache: "no-cache" });
+    (await r.json()).forEach(v => { VIDEOS[v.id] = v; });
+    LOADED = true;
+  } catch (e) { LOADED = false; }
+  autofill(false);
+}
+function videoId(raw) {
+  try { return new URL(cleanUrl(raw)).searchParams.get("v") || ""; } catch (e) { return ""; }
+}
+const KEYWORDS = {
+  retro: /amiga|c64|commodore|atari|retro|vintage|msx|spectrum|amstrad|minitel|apple ii|fpga|mister/i,
+  radio: /cibi|\bcb\b|radio|sdr|\bhf\b|antenne|talkie|rtl|uv-?k5|27 ?mhz/i,
+  maker: /3d|imprim|maker|diy|filament|creality|bambu|prusa/i,
+  mesh: /meshtastic|lora|mesh/i,
+  elec: /arduino|esp32|esp8266|pcb|jlcpcb|électronique|electronique|soudure|raspberry|pico/i
+};
+function guessTopics(text) {
+  const found = Object.keys(KEYWORDS).filter(k => KEYWORDS[k].test(text));
+  return new Set(found.length ? found : ["retro"]);
+}
+function hookFrom(desc) {
+  const line = (desc || "").split(/\n/).map(l => l.trim()).find(l => l) || "";
+  return line.length >= 20 && line.length <= 160 && !/^https?:/i.test(line) && !line.includes("#") ? line : "";
+}
+function syncChips() {
+  document.querySelectorAll("#chips .chip").forEach(b => b.setAttribute("aria-pressed", state.topics.has(b.dataset.id)));
+}
+function autofill(force) {
+  const st = $("status");
+  const raw = $("url").value.trim();
+  if (!raw) return;
+  const id = videoId(raw);
+  if (!id) { st.textContent = "Ce lien ne ressemble pas à une vidéo YouTube."; return; }
+  const v = VIDEOS[id];
+  if (v) {
+    $("title").value = v.title; $("hook").value = hookFrom(v.description);
+    state.topics = guessTopics(v.title + " " + (v.description || "")); syncChips();
+    st.textContent = "Vidéo trouvée : " + v.title;
+  } else if (LOADED) {
+    st.textContent = "Titre introuvable (la vidéo est hors des 15 dernières). Écris-le dans « Modifier ».";
+    $("more").open = true;
+  } else {
+    st.textContent = "Chargement de la liste des vidéos…";
+  }
+  refreshAll(true);
+}
+function load() {
+  $("url").value = EXAMPLE.url; $("title").value = EXAMPLE.title; $("hook").value = EXAMPLE.hook; $("ask").value = EXAMPLE.ask;
+}
+
+function buildChips() {
+  const host = $("chips");
+  TOPICS.forEach(t => {
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "chip"; b.textContent = t.label; b.dataset.id = t.id;
+    b.setAttribute("aria-pressed", state.topics.has(t.id));
+    b.addEventListener("click", () => {
+      state.topics.has(t.id) ? state.topics.delete(t.id) : state.topics.add(t.id);
+      b.setAttribute("aria-pressed", state.topics.has(t.id));
+      refreshAll(false);
+    });
+    host.appendChild(b);
+  });
+}
+
+async function copyText(text, btn) {
+  const done = () => { const old = btn.textContent; btn.textContent = "Copié"; btn.classList.add("done");
+    setTimeout(() => { btn.textContent = old; btn.classList.remove("done"); }, 1400); };
+  try { await navigator.clipboard.writeText(text); done(); }
+  catch (e) {
+    const ta = btn.closest(".card").querySelector("textarea");
+    ta.focus(); ta.select();
+    btn.textContent = "Sélectionné : Ctrl+C";
+    setTimeout(() => { btn.textContent = "Copier"; }, 2200);
+  }
+}
+
+buildCards(); buildChips(); load();
+$("url").addEventListener("input", () => { $("sample").hidden = true; autofill(true); });
+["title", "hook", "ask"].forEach(id => $(id).addEventListener("input", () => { $("sample").hidden = true; refreshAll(false); }));
+$("paste").addEventListener("click", async () => {
+  try { $("url").value = await navigator.clipboard.readText(); $("url").dispatchEvent(new Event("input")); }
+  catch (e) { $("status").textContent = "Collage refusé : colle le lien dans la case avec Ctrl+V."; $("url").focus(); }
+});
+NETWORKS.forEach(n => {
+  $(n.id + "-text").addEventListener("input", () => { state.dirty[n.id] = true; refreshMeta(n, vals().title ? { ...vals() } : { ...vals(), url: LINKS.youtube }); });
+  if (n.split) $(n.id + "-title").addEventListener("input", () => { state.dirty[n.id] = true; refreshMeta(n, { ...vals(), url: vals().url || LINKS.youtube }); });
+});
+$("cards").addEventListener("click", (e) => {
+  const c = e.target.closest("[data-copy]");
+  if (c) {
+    const n = NETWORKS.find(x => x.id === c.dataset.copy);
+    let text = $(n.id + "-text").value;
+    if (n.split) text = $(n.id + "-title").value + "\n\n" + text;
+    copyText(text, c);
+  }
+  const r = e.target.closest("[data-reset]");
+  if (r) fill(NETWORKS.find(x => x.id === r.dataset.reset), true);
+});
+$("theme").addEventListener("click", () => {
+  const root = document.documentElement;
+  const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+  root.dataset.theme = dark ? "light" : "dark";
+});
+refreshAll(true);
+loadVideos();
+</script>
+</body></html>

@@ -24,6 +24,23 @@ function saveState(state) {
 }
 
 const feed = await fetchFeed(CHANNEL_ID);
+
+// Liste des dernières vidéos, lue par l'Atelier de partage (docs/index.html)
+fs.writeFileSync(
+  "videos.json",
+  JSON.stringify(
+    feed.map((v) => ({
+      id: v.id,
+      title: v.title,
+      url: v.url,
+      published: v.published.toISOString(),
+      description: v.description.slice(0, 400),
+    })),
+    null,
+    2,
+  ) + "\n",
+);
+
 let state = loadState();
 
 if (!state) {
