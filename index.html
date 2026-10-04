@@ -294,8 +294,12 @@ function guessTopics(text) {
   return new Set(found.length ? found : ["retro"]);
 }
 function hookFrom(desc) {
-  const line = (desc || "").split(/\n/).map(l => l.trim()).find(l => l) || "";
-  return line.length >= 20 && line.length <= 160 && !/^https?:/i.test(line) && !line.includes("#") ? line : "";
+  const lines = (desc || "").split(/\n/).map(l => l.replace(/#\S+/g, "").trim()).filter(l => l && !/^https?:/i.test(l));
+  let line = lines[0] || "";
+  const cut = line.search(/[.!?](\s|$)/);
+  if (cut > 20) line = line.slice(0, cut + 1);
+  if (line.length > 200) line = line.slice(0, 200).replace(/\s+\S*$/, "") + "…";
+  return line.length >= 15 ? line : "";
 }
 function syncChips() {
   document.querySelectorAll("#chips .chip").forEach(b => b.setAttribute("aria-pressed", state.topics.has(b.dataset.id)));
