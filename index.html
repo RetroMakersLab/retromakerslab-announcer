@@ -104,7 +104,7 @@ input:focus-visible, textarea:focus-visible, button:focus-visible, a:focus-visib
         <div class="field"><label for="hook">Accroche</label><textarea id="hook" rows="2"></textarea></div>
         <div class="field"><label for="ask">Question pour la communauté</label><input type="text" id="ask" autocomplete="off"></div>
       </details>
-      <p class="note">Facebook est absent : pas de Page. Chaque texte reste modifiable avant de copier.</p>
+      <p class="note">Chaque texte reste modifiable avant de copier.</p>
     </section>
 
     <section class="cards" id="cards" aria-label="Textes par réseau"></section>
@@ -178,6 +178,16 @@ const NETWORKS = [
     open(text) { return "https://x.com/intent/post?text=" + encodeURIComponent(text); },
     openLabel: "Ouvrir X avec le texte",
     note: "Le lien compte pour 23 caractères, comme sur X."
+  },
+  {
+    id: "facebook", name: "Facebook", limit: 5000,
+    build(v) {
+      return "Nouvelle vidéo sur RetroMakersLab : " + v.title + "\n\n" + (v.hook ? v.hook + "\n\n" : "") + v.url +
+        (v.ask ? "\n\n" + v.ask : "") + "\n\n" + tags(4).join(" ");
+    },
+    open(text, v) { return "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(v.url); },
+    openLabel: "Ouvrir Facebook",
+    note: "Facebook n'accepte pas de texte pré-rempli : copie le texte, puis colle-le dans la fenêtre qui s'ouvre."
   },
   {
     id: "reddit", name: "Reddit", limit: 300, split: true,
