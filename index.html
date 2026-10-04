@@ -180,26 +180,6 @@ const NETWORKS = [
     note: "Le lien compte pour 23 caractères, comme sur X."
   },
   {
-    id: "insta", name: "Instagram", limit: 2200,
-    build(v) {
-      return "Nouvelle vidéo sur RetroMakersLab : " + v.title + "\n\n" + (v.hook ? v.hook + "\n\n" : "") +
-        "Le lien est dans la bio : " + LINKS.youtube + "\n" +
-        "Sur le site aussi : " + LINKS.site + "\n\n" + tags(8).join(" ");
-    },
-    open() { return "https://www.instagram.com/"; },
-    openLabel: "Ouvrir Instagram",
-    note: "Les liens ne sont pas cliquables dans une légende. Mets le lien de la vidéo dans ta bio avant de publier."
-  },
-  {
-    id: "tiktok", name: "TikTok", limit: 2200,
-    build(v) {
-      return (v.hook || v.title) + "\nVidéo complète sur YouTube : RetroMakersLab\n\n" + tags(5).join(" ");
-    },
-    open() { return "https://www.tiktok.com/upload"; },
-    openLabel: "Ouvrir TikTok",
-    note: "Légende courte pour un extrait. Pas de lien cliquable : renvoie vers la bio."
-  },
-  {
     id: "reddit", name: "Reddit", limit: 300, split: true,
     build(v) {
       return { title: v.title, body: (v.hook ? v.hook + "\n\n" : "") + "La vidéo complète (français) : " + v.url +
