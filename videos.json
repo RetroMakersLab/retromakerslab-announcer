@@ -1,5 +1,12 @@
 [
   {
+    "id": "yhEGBKDg7xw",
+    "title": "RTL-SDR : écoute les avions, les radioamateurs et la CIBI",
+    "url": "https://www.youtube.com/watch?v=yhEGBKDg7xw",
+    "published": "2026-10-05T18:53:50.000Z",
+    "description": "Avec une simple clé RTL-SDR et ton ordinateur, tu peux écouter les avions, les radioamateurs et la CIBI. Voici comment bien démarrer en SDR.\n\n🔗 Matériel :\n- RTL-SDR Blog V3 : https://amazon.fr/dp/B0BMKZCKTF?tag=retromakers05-21\n- Nooelec RTL-SDR v5 : https://amazon.fr/dp/B01HA642SW?tag=retromakers05-21\n- Antenne Donut AM MW SW : https://amazon.fr/dp/B0CXJ87FZ4?tag=retromakers05-21\n- Antenne Boucl"
+  },
+  {
     "id": "jufQUvb_FWQ",
     "title": "🔴 Écoute CIBI et HF en direct : y a-t-il quelqu'un ? Venez poser vos questions📡",
     "url": "https://www.youtube.com/watch?v=jufQUvb_FWQ",
@@ -46,7 +53,7 @@
     "title": "La Propagation Cibi Radio",
     "url": "https://www.youtube.com/watch?v=5cyUgoiI1Bg",
     "published": "2026-10-02T15:30:08.000Z",
-    "description": "Pourquoi la CIBI porte à 1 000 km un jour et reste muette le lendemain ? La réponse est à 150 millions de kilomètres : le Soleil. On décortique la propagation radio sur la bande 11 m (27 MHz) : cycle solaire, ionosphère, MUF, Sporadic E, éruptions solaires et outils gratuits pour prévoir les ouvertures avec un SDR.\n\n🌐 Site : https://retromakerslab.fr\n\n🛠️ Matériel utilisé :\n- Nooelec RTL-SDR v5 :"
+    "description": "Pourquoi la CIBI porte à 1 000 km un jour et reste muette le lendemain ? La réponse est à 150 millions de kilomètres : le Soleil. On décortique la propagation radio sur la bande 11 m (27 MHz) : cycle solaire, ionosphère, MUF, Sporadic E, éruptions solaires et outils gratuits pour prévoir les ouvertures avec un SDR.\n\n🌐 Site : https://retromakerslab.fr\n\n🛠️  :\n- RTL-SDR Blog V3 : https://amazon.fr/"
   },
   {
     "id": "eDBe-uTkAhA",
@@ -96,12 +103,5 @@
     "url": "https://www.youtube.com/watch?v=QwcUasCvdos",
     "published": "2026-09-19T15:30:23.000Z",
     "description": "Avant Facebook, avant Discord, avant même internet grand public, il y avait la CIBI. Un canal ouvert, des inconnus qui se parlent, des pseudos, des groupes qui se forment sur les ondes. Dans cette vidéo, je retrace comment la CIBI a fonctionné comme un véritable réseau social des années avant l'arrivée du web, avec ses codes, son argot, ses communautés locales et sa culture bien à elle.\n\n🔗 Matéri"
-  },
-  {
-    "id": "tPgISfcf1d8",
-    "title": "Passion",
-    "url": "https://www.youtube.com/watch?v=tPgISfcf1d8",
-    "published": "2026-09-16T08:30:07.000Z",
-    "description": "Un C64, une radio CIBI, une imprimante 3D. Le même atelier, tous les jours.\n\nTutos rétro-informatique, radio et maker sans blabla. La suite sur la chaîne.\n\nDiscord : https://discord.com/invite/Rztt735cep\n\n#RetroMakersLab #Shorts #RetroInformatique #RadioAmateur #CB27MHz #Maker #Amiga #commodore64"
   }
 ]
