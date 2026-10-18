@@ -1,5 +1,19 @@
 [
   {
+    "id": "uVBvllx2IDA",
+    "title": "🔴Sdr Rediffusion (Live du Dimanche)📡",
+    "url": "https://www.youtube.com/watch?v=uVBvllx2IDA",
+    "published": "2026-10-18T08:39:40.000Z",
+    "description": "🌐 Site : https://retromakerslab.fr\n\n🛠️ Matériel utilisé :\nMidland M88 : https://www.amazon.fr/dp/B08QCRFHCB?tag=retromakers05-21\nRadioddity CB-500 : https://www.amazon.fr/dp/B0CTBPDM6S?tag=retromakers05-21\nSuperstar 3900 : https://www.amazon.fr/dp/B0BY2DV87X?tag=retromakers05-21\nAntenne CB 27MHz : https://www.amazon.fr/dp/B0H2TV62Y2?tag=retromakers05-21\n\n❤️ Soutenir la chaîne : https://www.patre"
+  },
+  {
+    "id": "9oJbPnACg4E",
+    "title": "🔴Sdr Rediffusion  (Live du Dimanche)📡",
+    "url": "https://www.youtube.com/watch?v=9oJbPnACg4E",
+    "published": "2026-10-18T08:36:35.000Z",
+    "description": "Live radio sur RetroMakersLab : on écoute les bandes HF et le 27 MHz (CIBI) avec le SDR, et on cherche ensemble s'il y a de la propagation.\n\n🌐 Site : https://retromakerslab.fr\n\n🛠️ Matériel utilisé :\nMidland M88 : https://www.amazon.fr/dp/B08QCRFHCB?tag=retromakers05-21\nRadioddity CB-500 : https://www.amazon.fr/dp/B0CTBPDM6S?tag=retromakers05-21\nSuperstar 3900 : https://www.amazon.fr/dp/B0BY2DV87"
+  },
+  {
     "id": "xtVtLvV_CHI",
     "title": "Le President Jackson, la Cibi AM/FM/SSB Mythique",
     "url": "https://www.youtube.com/watch?v=xtVtLvV_CHI",
@@ -88,20 +102,6 @@
     "title": "Merci les abonnés",
     "url": "https://www.youtube.com/watch?v=UAR7Hen8qMw",
     "published": "2026-10-03T08:07:55.000Z",
-    "description": "Bienvenue sur RetroMakersLab ! \n🖥️ Site RetroMakersLab\nhttps://retromakerslab.fr\n\n📘 Guides RetroMakersLab (Payhip)\nGuide Amiga 500/1200 — Restauration Complète : https://payhip.com/b/FD26K\nGuide SDR Avancé — Terrain + config SDR# : https://payhip.com/b/o7lXR\nGuide Réparation Commodore 1702 : https://payhip.com/b/Q4rGM\nGuide CB 27MHz — Le Guide Intégral : https://payhip.com/b/2D3rj\nGuide UV-K5 — "
-  },
-  {
-    "id": "5cyUgoiI1Bg",
-    "title": "La Propagation Cibi Radio",
-    "url": "https://www.youtube.com/watch?v=5cyUgoiI1Bg",
-    "published": "2026-10-02T15:30:08.000Z",
-    "description": "Pourquoi la CIBI porte à 1 000 km un jour et reste muette le lendemain ? La réponse est à 150 millions de kilomètres : le Soleil. On décortique la propagation radio sur la bande 11 m (27 MHz) : cycle solaire, ionosphère, MUF, Sporadic E, éruptions solaires et outils gratuits pour prévoir les ouvertures avec un SDR.\n\n🌐 Site : https://retromakerslab.fr\n\n🛠️  :\n- RTL-SDR Blog V3 : https://amazon.fr/"
-  },
-  {
-    "id": "eDBe-uTkAhA",
-    "title": "Connecté",
-    "url": "https://www.youtube.com/watch?v=eDBe-uTkAhA",
-    "published": "2026-10-01T16:52:03.000Z",
     "description": "Bienvenue sur RetroMakersLab ! \n🖥️ Site RetroMakersLab\nhttps://retromakerslab.fr\n\n📘 Guides RetroMakersLab (Payhip)\nGuide Amiga 500/1200 — Restauration Complète : https://payhip.com/b/FD26K\nGuide SDR Avancé — Terrain + config SDR# : https://payhip.com/b/o7lXR\nGuide Réparation Commodore 1702 : https://payhip.com/b/Q4rGM\nGuide CB 27MHz — Le Guide Intégral : https://payhip.com/b/2D3rj\nGuide UV-K5 — "
   }
 ]
