@@ -1,5 +1,12 @@
 [
   {
+    "id": "BiJcKHOcfII",
+    "title": "Je découvre le Cibi Superstar 360 FM",
+    "url": "https://www.youtube.com/watch?v=BiJcKHOcfII",
+    "published": "2026-10-22T15:30:10.000Z",
+    "description": "Je découvre le Cibi Superstar 360 FM, un vieux poste mobile AM, FM et SSB : la façade et les commandes, le branchement de l'antenne, puis les essais en voiture et le verdict.\n\n🌐 Site : https://retromakerslab.fr\n\n🛠️ Matériel utilisé :\n• Antenne CB 27MHz : https://www.amazon.fr/dp/B0H2TV62Y2?tag=retromakers05-21\n• Antenne PL259 : https://www.amazon.fr/dp/B08VHS5YD8?tag=retromakers05-21\n• Adaptateu"
+  },
+  {
     "id": "exKeVgET--g",
     "title": "RetroMakersLab short",
     "url": "https://www.youtube.com/watch?v=exKeVgET--g",
@@ -96,12 +103,5 @@
     "url": "https://www.youtube.com/watch?v=1By4VQs7wlE",
     "published": "2026-10-03T15:17:52.000Z",
     "description": "Bienvenue sur RetroMakersLab ! \n🖥️ Site RetroMakersLab\nhttps://retromakerslab.fr\n\n📘 Guides RetroMakersLab (Payhip)\nGuide Amiga 500/1200 — Restauration Complète : https://payhip.com/b/FD26K\nGuide SDR Avancé — Terrain + config SDR# : https://payhip.com/b/o7lXR\nGuide Réparation Commodore 1702 : https://payhip.com/b/Q4rGM\nGuide CB 27MHz — Le Guide Intégral : https://payhip.com/b/2D3rj\nGuide UV-K5 — "
-  },
-  {
-    "id": "AYrkqGMQuf8",
-    "title": "🔴 LIVE Radio SDR : on écoute les ondes en direct (HF, CIBI, VHF) | RetroMakersLab📡",
-    "url": "https://www.youtube.com/watch?v=AYrkqGMQuf8",
-    "published": "2026-10-03T14:37:35.000Z",
-    "description": "🔗 Matériel :\n- Xiegu X6100 : https://amazon.fr/dp/B0B2CD48GC?tag=retromakers05-21\n- Président Lincoln 2+ : https://amazon.fr/dp/B07V2P2CGB?tag=retromakers05-21\n- UV-K5 (lot de 8) : https://amazon.fr/dp/B0CMPD7TQM?tag=retromakers05-21\n- Baofeng UV-5R : https://amazon.fr/dp/B0CSSC4D57?tag=retromakers05-21\n- Radtel RT-880 : https://amazon.fr/dp/B0F2SZMMC7?tag=retromakers05-21\n- Radtel RT-860 : https"
   }
 ]
